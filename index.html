@@ -1,9 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-ca">
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content=" to find the Volume of the Pyramid" />
+    <meta name="keywords" content="mths, ics20" />
+    <meta name="auther" content="Mohammed" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.lime-light_blue.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>V of Pyramid</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Volume of a Pyramid</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <img src="./images/Pyramid.png" alt="pyramid" />
+            <h2>Formulas:</h2>
+            <h4>V = (L * W * H) / 3</h4>
+          </tr>
+        </table>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>Length</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="L of Pyramid"
+            />
+            <label class="mdl-textfield__label" for="length-of-rectangle">L.....</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>Width</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="W of Pyramid"
+            />
+            <label class="mdl-textfield__label" for="length-of-rectangle">W.....</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>Height</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="H of Pyramid"
+            />
+            <label class="mdl-textfield__label" for="length-of-rectangle">H.....</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <br/>
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()"
+        >
+          Calculate
+        </button>
+        <br />
+        <div id="answers">
+          <div id="Volume"></div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
